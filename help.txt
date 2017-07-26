@@ -1,0 +1,9 @@
+=================== BIEREPING EVENTS ===================
+!events - Te permettra de connaitre les prochains events BierePing jeune mofo
+=================== NEWS/PAPERS INFOSEC ================
+!krebson - Voir les articles de krebsonsecurity
+!hackernews - Voir les articles de hackernews
+!ezine - Affiche un ezine de façon random
+!zataz - Voir les articles de zataz
+!protocole - Permet de balancer sur les gens
+========================================================
