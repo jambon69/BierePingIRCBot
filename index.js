@@ -2,9 +2,9 @@ var fs = require('fs');
 var feed = require("feed-read");
 
 var irc = require('irc');
-var client = new irc.Client('irc.hackerzvoice.net', 'BierePing', {
+var client = new irc.Client('irc.hackerzvoice.nett', 'BierePing', {
 	debug: false,
-	channels: ['#rtfm']
+	channels: ['#tapz']
 });
 
 client.addListener('message', function (from, to, message) {
