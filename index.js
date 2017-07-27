@@ -2,7 +2,7 @@ var fs = require('fs');
 var feed = require("feed-read");
 
 var irc = require('irc');
-var client = new irc.Client('irc.hackerzvoice.net', 'testApi', {
+var client = new irc.Client('irc.hackerzvoice.net', 'BierePing', {
 	debug: false,
 	channels: ['#tapz']
 });
