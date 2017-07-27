@@ -2,10 +2,11 @@ var fs = require('fs');
 var feed = require("feed-read");
 
 var irc = require('irc');
-var client = new irc.Client('irc.hackerzvoice.nett', 'BierePing', {
+var client = new irc.Client('irc.hackerzvoice.net', 'testApi', {
 	debug: false,
 	channels: ['#tapz']
 });
+var requestify = require('requestify');
 
 client.addListener('message', function (from, to, message) {
 	if(message == "!help") {
@@ -13,6 +14,16 @@ client.addListener('message', function (from, to, message) {
 	}
 	if(message == "!events") {
 		client.say(to, fs.readFileSync('events.txt', 'utf8'));
+
+		// requestify.get('http://localhost:8000/api/events')
+		// 	.then(function(response) {
+		// 		response.getBody();
+		// 		var json = JSON.parse(response.body);
+		// 		for (var i = 0; i < json.length; i++) {
+		// 			var msg = 'name: ' + json[i].event_name + ' location: ' + json[i].event_place;
+		// 			client.say(to, msg);
+		// 		}
+		// 	});
 	}
 	if(message == "!krebson") {
 		feed("https://krebsonsecurity.com/feed/", function(err, articles) {
